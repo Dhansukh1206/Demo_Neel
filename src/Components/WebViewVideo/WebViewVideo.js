@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import WebViewer from '@pdftron/webviewer';
-import { initializeVideoViewer } from '@pdftron/webviewer-video';
+import WebViewer from "@pdftron/webviewer";
+import { initializeVideoViewer } from "@pdftron/webviewer-video";
 
 export function WebViewVideo() {
   const viewer = useRef(null);
@@ -8,7 +8,7 @@ export function WebViewVideo() {
   useEffect(() => {
     WebViewer(
       {
-        path: "/webviewer/lib",
+        path: "lib",
         selectAnnotationOnCreation: true,
       },
       viewer.current
@@ -24,5 +24,7 @@ export function WebViewVideo() {
     });
   }, []);
 
-  return <div className="webviewer" ref={viewer}></div>;
+  return (
+    <div className="webviewer" ref={viewer} style={{ height: "100vh" }}></div>
+  );
 }

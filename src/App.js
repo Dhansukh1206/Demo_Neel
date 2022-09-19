@@ -4,7 +4,7 @@ import { WebViewVideo } from './Components/WebViewVideo';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <WebViewVideo />
     </div>
   );
